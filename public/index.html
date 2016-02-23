@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>File Metadata Microservice</title>
+  <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+  <script type="text/javascript" src="/public/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="/public/js/index.js"></script>
+</head>
+<body>
+  <div class = "container">
+    <h1>API File Metadata Microservice</h1>
+    <p>Full stack Javascript app built with node.js, express.js, and Bootstrap by <a href="https://github.com/eeseesee">ECC</a></p>
+    <blockquote>
+        User stories:
+        <ul>1. I can submit a FormData object that includes a file upload.</ul>
+        <ul>2. When I submit something, I will receive the file size in bytes within the JSON response</ul>
+    </blockquote><br>
+    <h3>Example usage:</h3>
+    <form id="fileForm" enctype="multipart/form-data">
+			<div class="form-group">
+				<label for="inputFile">File to analyse</label>
+				<input type="file" id="inputFile" name="inputFile">
+			</div>
+			<button id="submitFile" type="submit" class="btn btn-primary">Submit</button>
+		</form>
+    <br>
+    <h3>Result:</h3>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div id="results">
+        </div>
+      </div>
+		</div>
+    <h3>Example posts a Form Data object to the endpoint:</h3>
+		<div><code><script>document.write(window.location.origin)</script>/fileanalyze/</code></div>
+		<h3>File metadata output:</h3>
+    <div class="panel panel-default">
+      <div class="panel-body">
+          <div id="jsonResult"></div>
+      </div>
+    </div>
+    <br>
+  </div>
+</body>
+
+</html>
